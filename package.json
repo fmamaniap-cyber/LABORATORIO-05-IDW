@@ -1,0 +1,11 @@
+
+{
+  "name": "laboratorio05-nodejs",
+  "version": "1.0.0",
+  "description": "Laboratorio 05 de Desarrollo Web",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}

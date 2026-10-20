@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana",
+    "carrera": "Ingeniería de Sistemas"
+  },
+  {
+    "id": 2,
+    "nombre": "Luis",
+    "carrera": "Ingeniería de Sistemas"
+  },
+  {
+    "name": "Add your name in the body"
+  },
+  {
+    "nombre": "Juan Perez",
+    "edad": 20,
+    "curso": "Ingeniería"
+  },
+  {
+    "nombre": "Fabiola Mamani",
+    "edad": 18,
+    "curso": "Ingeniería"
+  },
+  {
+    "nombre": "Fabiola Mamani",
+    "edad": 18,
+    "curso": "Ingeniería"
+  }
+]

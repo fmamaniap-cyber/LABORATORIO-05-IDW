@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Lista de estudiantes</h1>
+    <p>Laboratorio 05 - Fabiola Nicole Mamani Apaza</p>
+
+    <div class="contenedor">
+        <h2>Estudiantes registrados</h2>
+
+        <button id="boton">Mostrar estudiantes</button>
+
+        <ul id="lista"></ul>
+    </div>
+
+    <script>
+        const boton = document.getElementById('boton');
+        const lista = document.getElementById('lista');
+
+        boton.addEventListener('click', async () => {
+            try {
+                const respuesta = await fetch('/api/estudiantes');
+                const estudiantes = await respuesta.json();
+
+                lista.innerHTML = '';
+
+                estudiantes.forEach((estudiante) => {
+                    const item = document.createElement('li');
+                    item.textContent = estudiante.nombre + ' - ' + estudiante.carrera;
+                    lista.appendChild(item);
+                });
+            } catch (error) {
+                lista.innerHTML = '<li>Error al cargar estudiantes</li>';
+            }
+        });
+    </script>
+
+</body>
+</html>
